@@ -1,0 +1,16 @@
+name: Python application
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Python 3.10
+    - name: Install dependencies
+      run: |
+        git checkout main
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
